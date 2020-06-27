@@ -1,3 +1,34 @@
+//nav sticky part start
+
+$(window).scroll(function () {
+    $scrollamout = $(window).scrollTop();
+
+    if ($scrollamout > 300) {
+        $(".menu").addClass("sticky")
+    } else {
+        $(".menu").removeClass("sticky")
+    }
+
+    if ($scrollamout > 2000) {
+        $(".btop").fadeIn()
+    } else {
+        $(".btop").fadeOut()
+    }
+})
+
+$(".btop").click(function () {
+    $("html,body").animate({
+        scrollTop: 0
+    }, 2000)
+})
+
+
+
+
+
+//nav sticky part end
+
+
 //Banner part start
 
 $('.slider').slick({
@@ -14,26 +45,28 @@ $('.slider').slick({
 
     responsive: [
         {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-    },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-    },
-        {
-            breakpoint: 480,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+
+            }
+    },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+            }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
             }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -65,6 +98,36 @@ $('.port-slide .row').slick({
     autoplay: true,
 
 
+
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+
+            }
+    },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+
+            }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+
 });
 
 
@@ -95,26 +158,28 @@ $('.services-slider').slick({
 
     responsive: [
         {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-    },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-    },
-        {
-            breakpoint: 480,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                 vertical: false,
+            }
+    },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: false,
+            }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: false,
+
             }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -147,30 +212,37 @@ $('#testimonial-part .left').slick({
     centerPadding: 0,
     prevArrow: '<i class="fa fa-chevron-up prevs" aria-hidden="true"></i>',
     nextArrow: '<i class="fa fa-chevron-down nexts" aria-hidden="true"></i>',
-    asNavFor:'#testimonial-part .right',
+    asNavFor: '#testimonial-part .right',
 
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 991,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+                slidesToScroll: 1,
+                 vertical: false,
+                centerMode: true,
+                arrows: false,
             }
     },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                vertical: false,
+                centerMode: true,
+                arrows: false,
             }
     },
         {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                vertical: false,
+                centerMode: true,
+                arrows: false,
             }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -189,29 +261,28 @@ $('#testimonial-part .right').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
 
-    fade:true,
-    arrows:false,
-   
-    asNavFor:'#testimonial-part .left',
+    fade: true,
+    arrows: false,
+
+    asNavFor: '#testimonial-part .left',
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 991,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+                slidesToShow: 1,
+                slidesToScroll: 1,
+               
             }
     },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1,
             }
     },
         {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -228,16 +299,61 @@ $('#testimonial-part .right').slick({
 //counter part start
 
 
-  $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
+$('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
 //counter part end
 
 
+//brand part start
+
+
+$('#brand-part .sliders').slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: 0,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              
+            }
+    },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
 
 
 
 
 
 
+
+
+
+//brand part end

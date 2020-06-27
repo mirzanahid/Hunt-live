@@ -78,6 +78,10 @@ nav {
 
 }
 
+nav button i{
+    color: #fff;
+}
+
 nav ul li {
     margin-left: 30px;
 }
@@ -111,11 +115,19 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
-body {
+html,body {
     overflow-x: hidden;
 }
 
-
+.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+    background: #000;
+    border-bottom: none;
+    transition: .2s;
+    z-index: 9999;
+}
 
 /*===========================================
           navbar-part css start
@@ -295,7 +307,7 @@ body {
 
 #about-part .img .pic {
     position: relative;
- 
+
 }
 
 #about-part .img .pic {
@@ -330,6 +342,7 @@ body {
     padding: 25px;
     position: relative;
     transition: .4s;
+    z-index: 1;
 }
 
 #about-part .item h4 {
@@ -589,6 +602,7 @@ body {
     justify-content: space-between;
 
 
+
 }
 
 #our_services-part .item .left {
@@ -749,9 +763,11 @@ body {
     background: #fec600;
     margin: -35px;
 }
-#our_services-part .slick-center .right{
+
+#our_services-part .slick-center .right {
     filter: drop-shadow(1px 1px 1px #000);
 }
+
 /*===========================================
           our-services-part css end
   ===========================================*/
@@ -1361,6 +1377,7 @@ body {
     text-align: center;
     padding: 30px 5px;
     cursor: pointer;
+    margin: 10px;
 }
 
 #brand-part .box img {
@@ -1369,10 +1386,9 @@ body {
 
 
 
-#brand-part .box:hover {
+#brand-part .slick-center {
     border: 1px solid #fec600;
 }
-
 
 
 /*===========================================
@@ -1412,6 +1428,27 @@ body {
 /*===========================================
            footer_top part css start
   ===========================================*/
+.btop {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+
+    background: #fec600;
+    color: #fff;
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+.btop:hover {
+    color: #000;
+}
+
 
 #footer_top-part {
     background: #222222;
@@ -1571,25 +1608,6 @@ body {
 #footer_down-part .box span {
     color: #fec600;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
